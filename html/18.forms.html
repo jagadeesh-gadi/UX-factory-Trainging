@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="F:\jagadeesh\bootstraps\css\bootstrap-grid.css.map">
+    <title>HTML Forms</title>
+    <!-- <link rel="stylesheet" href="form-style.css" />
+  </head> -->
+  <body>
+    <h1><u>Registration Form :</u></h1>
+    <div>
+      <form action="/registration.py" name="Registration" method="get">
+        <!-- text field -->
+        <div>
+          <label for="fname">First Name :</label> <br />
+          <input type="text" id="fname" name="fname" value="naga" readonly />
+        </div>
+        <br />
+        <div>
+          <label for="lname">Last Name :</label> <br />
+          <input type="text" id="lname" name="lname" value="krishna" disabled />
+        </div>
+        <br />
+        <!-- type email -->
+        <div>
+          <input type="email" id="gmail" name="gmail" placeholder="gmail" />
+        </div>
+        <br />
+        <!-- type password -->
+        <div>
+          <label for="usrpwd">Password :</label> <br />
+          <input type="password" id="usrpwd" name="usrpwd" />
+        </div>
+        <br />
+        <!-- type number -->
+        <div>
+          <label for="contact">Contact Number :</label> <br />
+          <input type="number" id="contact" name="contact" />
+        </div>
+        <br />
+        <!-- select -->
+        <div>
+          <label for="city">City :</label> <br />
+          <select name="city" id="city">
+            <option value="">Please Choose An Option</option>
+            <option value="ong">Ongole</option>
+            <option value="hyd">Hyderabad</option>
+            <option value="chn">Chennai</option>
+            <option value="vskp">vizag</option>
+          </select>
+        </div>
+        <br />
+        <!-- type radio -->
+        <div class="radio">
+          <label>Choose Your Gender :</label>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other" />
+          <label for="other">Other</label>
+        </div>
+        <br />
+        <!-- type checkbox -->
+        <div>
+          <label>Choose Your Education :</label>
+          <input
+            type="checkbox"
+            id="education1"
+            name="education1"
+            value="ssc"
+          />
+          <label for="education1">SSc</label>
+          <input
+            type="checkbox"
+            id="education2"
+            name="education2"
+            value="inter"
+          />
+          <label for="education2">INTERMEDIATE</label>
+          <input
+            type="checkbox"
+            id="education3"
+            name="education3"
+            value="b.tech"
+          />
+          <label for="education3">B.TECH</label>
+          <input
+            type="checkbox"
+            id="education4"
+            name="checkbox4"
+            value="m.tech"
+          />
+          <label for="education4">M.TECH</label>
+        </div>
+        <br />
+        <!-- type date -->
+        <div>
+          <label for="dob">Date Of Birth :</label>
+          <input type="date" id="dob" name="dob" />
+        </div>
+        <br />
+        <!-- type file -->
+        <div>
+          <label for="files">Upload Resume :</label>
+          <input type="file" id="files" name="files" />
+        </div>
+        <br />
+        <!-- textarea -->
+        <div>
+          <label for="about">About Yourself :</label> <br />
+          <textarea name="about" id="about" cols="30" rows="10"></textarea>
+        </div>
+        <br />
+        <div>
+          <!-- type hidden -->
+          <input type="hidden" id="cusname" value="vamsi" />
+        </div>
+        <br />
+        <!-- type range -->
+        <div>
+          <label for="volume">Volume (Between 0 to 100) :</label>
+          <input type="range" id="volume" name="volume" min="0" max="100" />
+        </div>
+        <br />
+        <!-- type url -->
+        <div>
+          <label for="link">Enter Url :</label>
+          <input type="url" id="link" name="link" />
+        </div> <br>
+        <!-- pincode -->
+        <div>
+          <label for="pincode">pincode :</label>
+          <input
+            type="number"
+            id="pincode"
+            name="pincode"
+            min="1"
+            max="7"
+            step="7"
+            style="width: 80px;"
+          />
+        </div>
+        <br />
+        <!-- buttons -->
+        <div class=>
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Reset" />
+        </div>
+        <br />
+      </form>
+    </div>
+  </body>
+</html>

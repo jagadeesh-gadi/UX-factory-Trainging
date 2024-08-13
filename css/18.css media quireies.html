@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>media quiries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .column {
+        float: left;
+      }
+
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
+      @media screen and (min-width: 600px) {
+        .column {
+          width: 50%;
+        }
+      }
+      @media screen and (min-width: 900px) {
+        .column {
+          width: 33%;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        .column {
+          width: 25%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="column" style="background-color: burlywood">
+        <h2>column1</h2>
+        <p>this is paragraoh text</p>
+      </div>
+      <div class="column" style="background-color: blueviolet">
+        <h2>column2</h2>
+        <p>this is paragraph text</p>
+      </div>
+      <div class="column" style="background-color: cadetblue">
+        <h2>column3</h2>
+        <p>this is paragraph text</p>
+      </div>
+      <div class="column" style="background-color: darkgoldenrod">
+        <h2>column4</h2>
+        <p>this is paragraph text</p>
+      </div>
+    </div>
+  </body>
+</html>

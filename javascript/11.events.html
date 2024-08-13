@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>events</title>
+  </head>
+  <body onresize="resizeevent()" onload="loadevent()" onunload="unloadevent()">
+    <h2 style="text-align: center"><u>Events</u></h2>
+    <input
+      type="text"
+      id="keydown"
+      name="firstname"
+      onkeydown="keydownevent()"
+    />
+    <br /><br />
+
+    <input
+      type="text"
+      id="keyup"
+      name="lastname"
+      onkeyup="keyupevent()"
+    /><br /><br />
+
+    <input
+      type="text"
+      id="event"
+      onfocus="focusevent()"
+      onblur="blurevent()"
+      onchange="changeevent()"
+    />
+    <br /><br />
+
+    <form
+      id="registerform"
+      name="registerform"
+      action="register.py"
+      onsubmit="submitevent()"
+    >
+      <input
+        type="text"
+        name="usrname"
+        id="usrname"
+        placeholder="User Name"
+      /><br /><br />
+      <input
+        type="password"
+        name="pwd"
+        id="pwd"
+        placeholder="Password"
+      /><br /><br />
+      <input type="submit" value="submit" name="submit" />
+    </form>
+
+    <script>
+      function keydownevent() {
+        alert("you pressed a key");
+      }
+
+      function keyupevent() {
+        alert("you released a key");
+      }
+
+      function focusevent() {
+        document.getElementById("event").style.background = "lightblue";
+      }
+
+      function blurevent() {
+        document.getElementById("event").style.border = "10px solid green";
+      }
+
+      function changeevent() {
+        document.getElementById("event").style.color = "darkviolet";
+      }
+
+      function submitevent() {
+        alert("form submitted");
+      }
+
+      function resizeevent() {
+        alert("window is resized");
+      }
+
+      function loadevent() {
+        alert("webpage is reloaded");
+      }
+
+      function unloadevent() {
+        alert("webpage is unloaded");
+      }
+    </script>
+  </body>
+</html>

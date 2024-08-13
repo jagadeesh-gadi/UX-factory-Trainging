@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>call and apply methods</title>
+  </head>
+  <body>
+    <div id="show"></div>
+    <div id="display"></div>
+    <script>
+      let person1 = {
+        Fname: "Naga",
+        Lname: "Vamsi",
+      };
+
+      let person2 = {
+        Fname: "krishna",
+        Lname: "jhon",
+      };
+
+      let person = {
+        fullname: function (age, city) {
+          return this.Fname + " " + this.Lname + " " + age + " " + city;
+        },
+      };
+
+      document.getElementById("show").innerHTML = person.fullname.call(person1);
+      document.getElementById("display").innerHTML = person.fullname.apply(
+        person2,
+        ["23", "Ongole"]
+      );
+    </script>
+  </body>
+</html>

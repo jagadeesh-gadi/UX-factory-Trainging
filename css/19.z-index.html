@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Z-index</title>
+    <style>
+      .container {
+        position: relative;
+      }
+      #box-1 {
+        position: relative;
+        background-color: blueviolet;
+        border: 2px solid green;
+        margin: 40px;
+        top: 28px;
+        height: 180px;
+        width: 500px;
+        padding: 10px;
+        color: white;
+        border-radius: 15px;
+        z-index: 3;
+      }
+      #box-2{
+          position: absolute;
+          background-color: darkcyan;
+          border: 2px solid lightcoral;
+          height: 250px;
+          top: 0px;
+          width: 480px;
+          right: 100px;
+          color: white;
+          border-radius: 15px;
+          padding: 10px;
+          z-index: 1;
+      }
+      #box-3{
+          position: absolute;
+          background-color: darkkhaki;
+          border: 2px solid darkorange;
+          height: 220px;
+          width: 400px;
+          top: 8px;
+          right: 50px;
+          color: white;
+          padding: 10px;
+          border-radius: 15px;
+          z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="box-1">box-model1</div>
+      <div id="box-2">box-model2</div>
+      <div id="box-3">box-model3</div>
+    </div>
+  </body>
+</html>

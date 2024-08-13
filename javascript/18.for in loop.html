@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>loop</title>
+  </head>
+  <body>
+    <script>
+      let student = { fname: "naga", lname: "vamsi", age: 24 };
+      for(let x in student){  // here x is key
+          document.write(x + " " + student[x] + "<br>");   // here x is key and student[x] is used to fetch the value
+      }
+
+      document.write("<hr>");
+
+      let arr = ["naga","vamsi","krishna","avinash"];
+      for(let x in arr){
+          document.write(arr[x] + "<br>");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>variables</title>
+    <style>
+      /* this is global variable*/
+
+      :root {
+        --green: rgb(106, 212, 106);
+        --blue: rgb(38, 101, 218);
+        --font: 50px
+      }
+
+      h1 {
+        background-color: var(--green);
+        font-size: var(--font);
+      }
+      p {
+        background-color: var(--blue);
+      }
+
+      /* this is local variable*/
+      h2 {
+        --orange: rgb(201, 149, 54);
+        background-color: var(--orange);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>this is css variables</h1>
+    <h2>this is local variable</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit consequatur
+      illo velit, cupiditate molestias assumenda.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore nihil
+      perspiciatis optio, quibusdam mollitia corporis.
+    </p>
+  </body>
+</html>

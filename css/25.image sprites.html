@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>image sprites</title>
+    <style>
+      #navlist {
+        position: relative;
+      }
+      #navlist li {
+        position: absolute;
+        list-style-type: none;
+      }
+      #navlist li,
+      a {
+        height: 42px;
+        display: block;
+      }
+      #home {
+        background: url(images/navsprites.jpeg);
+        background-position: 0 0;
+        width: 46px;
+        left: 0px;
+      }
+      #prev {
+        background: url(images/navsprites.jpeg);
+        background-position: -48px 0;
+        width: 42px;
+        left: 75px;
+      }
+      #next {
+        background: url(images/navsprites.jpeg);
+        background-position: -92px 0;
+        width: 42px;
+        left: 140px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="navlist">
+      <li id="home">
+        <a href="https://www.youtube.com/" target="_blank"></a>
+      </li>
+      <li id="prev">
+        <a href="https://www.google.com/" target="_blank"></a>
+      </li>
+      <li id="next">
+        <a href="https://www.flipkart.com/" target="_blank"></a>
+      </li>
+    </ul>
+  </body>
+</html>

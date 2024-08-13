@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>date objects</title>
+  </head>
+  <body>
+    <h2><u>Date Objects</u></h2>
+    <script>
+      let x = new Date();
+      console.log(x);
+      console.log("this is fullyear", x.getFullYear());
+      console.log("this is month", x.getMonth());
+      console.log("this is date", x.getDate());
+      console.log("this is day", x.getDay());
+      console.log("this is time", x.getTime());
+      console.log("this is hours", x.getHours());
+      console.log("this is minutes", x.getMinutes());
+      console.log("this is seconds", x.getSeconds());
+      console.log("this is milliseconds", x.getMilliseconds());
+
+      // set Date Methods
+      x.setFullYear(2030);
+      x.setMonth(9);
+      x.setDate(10);
+      x.setHours(10);
+      x.setMinutes(22);
+      x.setSeconds(55);
+      console.log(x);
+    </script>
+  </body>
+</html>

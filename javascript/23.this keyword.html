@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this keyword</title>
+  </head>
+  <body>
+    <script>
+      var address = {
+        company: "Wipro",
+        city: "Bangalore",
+        state: "Karnataka",
+        country: "India",
+        fulladdress: function () {
+          return (
+            this.company +
+            " " +
+            this.city +
+            " " +
+            this.state +
+            " " +
+            this.country
+          );
+        },
+      };
+      var obj = address.fulladdress();
+      document.write(obj);
+    </script>
+  </body>
+</html>

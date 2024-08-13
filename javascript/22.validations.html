@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>validations</title>
+  <style>
+    body{
+      text-align: center;
+      border: 3px solid red;
+      margin:100px;
+      padding: -30px;
+      color: rgb(13, 51, 243);
+    }
+    span {
+      color: red;
+      display: none;
+    }
+    h1{
+      text-decoration:underline;
+      color: brown;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>validations using javascript </h1>
+  <form action="#" name="registrationform" method="post" onsubmit="return validform()">
+    <!--first name text input-->
+    <label>First Name:</label>
+    <input type="text" name="firstname" id="firstname" oninput="validform()" />
+    <br />
+    <span id="fnameerror">FName should be in alpha only and should be min 4 characters and max 10
+      characters</span><br />
+
+    <!--last name text input-->
+    <label>Last Name:</label>
+    <input type="text" name="lastname" id="lastname" oninput="validform()" /><br />
+    <span id="lnameerror">LName should be in alpha only and should be min 4 characters and max 10
+      caharacters</span><br />
+
+    <!--mobile number input-->
+    <label>Mobile Number:</label>
+    <input type="number" name="mblnumber" id="mblnumber" oninput="validform()" /><br />
+    <span id="mblnumbererror">Mobile number should be in numericals only and should be contain 10
+      digits</span><br />
+
+    <!--password input-->
+    <label>Enter Password:</label>
+    <input type="password" name="password" id="password" oninput="validform()" />
+    <br />
+    <span id="passworderror">please enter a password</span><br />
+
+    <label>Confirm Password:</label>
+    <input type="password" name="confirmpassword" id="confirmpassword" oninput="validform()" />
+    <br />
+    <span id="confirmpassworderror">confirmpassword</span>
+
+    <span id="passwordsmismatcherror">passwords mismatch</span><br />
+
+    <!--select input-->
+    <label>city:</label>
+    <select name="city" id="city" onchange="validform()">
+      <option value="">select a city</option>
+      <option value="bng">Bangalore</option>
+      <option value="hyd">Hyderabad</option>
+      <option value="chn">Chennai</option>
+      <option value="nd">Noida</option>
+    </select><br />
+    <span id="cityerror">Please Select City</span><br />
+
+    <!--Radio input-->
+    <label>select your age:</label>
+    <input type="radio" id="age1" name="age" value="30" onclick="validform()" />
+    <label for="age1">0-30</label>
+    <input type="radio" id="age2" name="age" value="60" onclick="validform()" />
+    <label for="age2">31-60</label>
+    <input type="radio" id="age3" name="age" value="100" onclick="validform()" />
+    <label for="age3">61-100</label><br />
+    <span id="ageerror">Please Select Age</span><br />
+
+    <!--checkbox input-->
+    <input type="checkbox" name="checkbox" onclick="validform()" />
+    <label>accept</label>
+    <span id="boxerror">Please click this box</span><br /><br />
+
+    <input type="submit" value="Submit" />
+
+    <script>
+      function validform() {
+        var fname = document.forms["registrationform"]["firstname"].value;
+        var lname = document.forms["registrationform"]["lastname"].value;
+        var mblnumber = document.forms["registrationform"]["mblnumber"].value;
+        var password = document.forms["registrationform"]["password"].value;
+        var confirmpassword = document.forms["registrationform"]["confirmpassword"].value;
+        var city = document.forms["registrationform"]["city"].value;
+        var age1 = document.forms["registrationform"]["age"][0].checked;
+        var age2 = document.forms["registrationform"]["age"][1].checked;
+        var age3 = document.forms["registrationform"]["age"][2].checked;
+        var checkbox = document.forms["registrationform"]["checkbox"].checked;
+
+        // firs tname text input condition
+        if (fname.length >= 4 && fname.length <= 30) {
+          document.getElementById("fnameerror").style.display = "none";
+        } else {
+          document.getElementById("fnameerror").style.display = "block";
+          return false;
+        }
+
+        // last name text input condition
+        if (lname.length >= 4 && lname.length <= 10) {
+          document.getElementById("lnameerror").style.display = "none";
+        } else {
+          document.getElementById("lnameerror").style.display = "block";
+          return false;
+        }
+
+        // mblnumber input condition
+        if (mblnumber.length == 10) {
+          document.getElementById("mblnumbererror").style.display = "none";
+        } else {
+          document.getElementById("mblnumbererror").style.display = "block";
+          return false;
+        }
+
+        // password condition
+        if (password == "") {
+          document.getElementById("passworderror").style.display = "block";
+          return false;
+        } else {
+          document.getElementById("passworderror").style.display = "none";
+        }
+
+        if (confirmpassword == "") {
+          document.getElementById("confirmpassworderror").style.display = "block";
+          return false;
+        } else {
+          document.getElementById("confirmpassworderror").style.display = "none";
+        }
+
+        if (password == confirmpassword) {
+          document.getElementById("passwordsmismatcherror").style.display = "none";
+        } else {
+          document.getElementById("passwordsmismatcherror").style.display = "block";
+          return false;
+        }
+
+        // select input condition
+        if (city == "") {
+          document.getElementById("cityerror").style.display = "block";
+          return false;
+        } else {
+          document.getElementById("cityerror").style.display = "none";
+        }
+
+        // radio input condition
+        if (age1 || age2 || age3) {
+          document.getElementById("ageerror").style.display = "none";
+        } else {
+          document.getElementById("ageerror").style.display = "block";
+          return false;
+        }
+
+        // checkbox input condition
+        if (checkbox == "") {
+          document.getElementById("boxerror").style.display = "block";
+          return false;
+        } else {
+          document.getElementById("boxerror").style.display = "none";
+        }
+      }
+    </script>
+  </form>
+</body>
+
+</html>

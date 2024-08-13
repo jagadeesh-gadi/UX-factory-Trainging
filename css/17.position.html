@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>position</title>
+    <style>
+      body {
+        height: 1500px;
+      }
+      #static {
+        position: static;
+        border: 3px solid yellowgreen;
+      }
+      #fixed {
+        position: fixed;
+        border: 3px solid brown;
+        bottom: 90px;
+      }
+      #relative {
+        position: relative;
+        border: 3px solid darkseagreen;
+        top: 10px;
+        left: 10px;
+        width: 500px;
+        height: 200px;
+      }
+      #absolute {
+        position: absolute;
+        border: 2px solid darkmagenta;
+        width: 200px;
+        height: 100px;
+        top: 30px;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="static">this is static</div>
+    <div id="fixed">this is fixed</div>
+    <div id="relative">
+      this is relative
+      <div id="absolute">this is absolute</div>
+    </div>
+  </body>
+</html>

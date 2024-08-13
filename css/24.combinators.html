@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>combinators</title>
+    <style>
+      /* descendent selector (space) */
+      /* div p {
+        background-color: lightgreen;
+      } */
+
+      /* child selector (>) */
+      /* div > p {
+        background-color: lightgreen;
+      } */
+
+      /* adjacent sibling selector (+) */
+      div + p {
+        background-color: lightgreen;
+      }
+
+      /* general sibling selector (~) */
+      /* div ~ p {
+        background-color: lightgreen;
+      } */
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>paragraph 1 in the div</p>
+      <p>paragraph 2 in the div</p>
+      <article><p>paragraph 3 in the div</p></article>
+      <p>paragraph 4 in the div</p>
+    </div>
+    <p>paragraph 5 outside the div</p>
+    <p>paragraph 6 outside the div</p>
+    <p>paragraph 7 outside the div</p>
+    <p>paragraph 8 outside the div</p>
+  </body>
+</html>

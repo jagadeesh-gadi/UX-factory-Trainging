@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>colspan & rowspan</title>
+    <style>
+      #star th,
+      #star td {
+        border: 3px solid blue;
+        padding: 20px;
+      }
+
+      #star table {
+        border-collapse: collapse;
+        margin-left: auto; /* for table move to center we use margin-left and margin-right */
+        margin-right: auto;
+      }
+
+      #sun th,
+      #sun td {
+        border: 3px solid green;
+        padding: 20px;
+      }
+
+      #sun table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- colspan -->
+    <div id="star">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th colspan="2">city</th>
+          <th>mobile</th>
+        </tr>
+
+        <tr>
+          <td>vamsi</td>
+          <td>ongole</td>
+          <td>hyderabad</td>
+          <td>9014038977</td>
+        </tr>
+
+        <tr>
+          <td>naga</td>
+          <td>tirupati</td>
+          <td>vizag</td>
+          <td>9390771839</td>
+        </tr>
+      </table>
+    </div>
+
+    <br />
+    <!-- rowspan -->
+
+    <div id="sun">
+      <table>
+        <tr>
+          <th>Name</th>
+          <td>krishna</td>
+          <td>avinash</td>
+        </tr>
+
+        <tr>
+          <th rowspan="2">city</th>
+          <td>guntur</td>
+          <td>gudur</td>
+        </tr>
+
+        <tr>
+          <td>bangalore</td>
+          <td>nellore</td>
+        </tr>
+
+        <tr>
+          <th>mobile</th>
+          <td>9014038977</td>
+          <td>9030563932</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

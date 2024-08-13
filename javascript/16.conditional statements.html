@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>conditional statements</title>
+    <style>
+      h2{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 ><u>conditional sataements</u></h2>
+    <h2><input type="number" name="number"></h2>
+    <h2> <button> enter</button></h2>
+
+    <script>
+      // if statement
+      if (10 > 5) {
+        console.log("true");
+      }
+
+      // if-else statement
+      let age = 24;
+      if (age > 18) {
+        console.log("you are eligible");
+      } else {
+        console.log("you are not eligible");
+      }
+
+      // if-elif statement
+      let week = "sunday";
+      if (week == "sunday") {
+        console.log("today is sunday");
+      } else if (week == "monday") {
+        console.log("today is monday");
+      } else if (week == "tuesday") {
+        console.log("today is tuesday");
+      } else if (week == "wednesday") {
+        console.log("today is wednesday");
+      } else if (week == "thursday") {
+        console.log("today is thursday");
+      } else if (week == "friday") {
+        console.log("today is friday");
+      } else if (week == "saturday") {
+        console.log("today is saturday");
+      } else {
+        console.log("wrong input");
+      }
+      
+
+      //switch statement
+      let day = "friday";
+      switch (day) {
+        case "sunday":
+          console.log("sunday");
+          break;
+        case "monday":
+          console.log("monday");
+          break;
+        case "tuesday":
+          console.log("tuesday");
+          break;
+        case "wednesday":
+          console.log("wednesday");
+          break;
+        case "thursday":
+          console.log("thursday");
+          break;
+        case "friday":
+          console.log("friday");
+          break;
+        case "saturday":
+          console.log("saturday");
+          break;
+        default:
+          console.log("wrong input");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>settimeout</title>
+    <style>
+      h2{
+       color:red;
+       text-align: center;
+       font-size: 200px;
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <h2 id="demo"></h2>
+    <script>
+      let wishes = setTimeout(myGreeting, 2000);
+
+      function myGreeting() {
+        document.getElementById("demo").innerHTML = "Happy Birthday";
+      }
+    </script>
+  </body>
+</html>
